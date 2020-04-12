@@ -7,7 +7,7 @@ spotless {
     googleJavaFormat()
     endWithNewline()
 
-    licenseHeaderFile 'spotless.license.java'		// License header file
+    licenseHeaderFile rootProject.file("spotless.license.kt")		// License header file
     // Obviously, you can't specify both licenseHeader and licenseHeaderFile at the same time
 
     importOrderFile 'spotless.importorder'				// An import ordering file, exported from Eclipse
