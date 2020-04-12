@@ -26,7 +26,11 @@ import android.view.View.MeasureSpec.EXACTLY
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
-import androidx.annotation.*
+import androidx.annotation.RestrictTo
+import androidx.annotation.StringRes
+import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
+import androidx.annotation.LayoutRes
 import androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

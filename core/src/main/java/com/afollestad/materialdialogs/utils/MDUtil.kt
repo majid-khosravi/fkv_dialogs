@@ -27,17 +27,29 @@ import android.text.Editable
 import android.text.Html
 import android.text.TextWatcher
 import android.util.AttributeSet
-import android.view.*
+import android.view.View
+import android.view.ViewTreeObserver
+import android.view.WindowManager
+import android.view.ViewGroup
+import android.view.LayoutInflater
 import android.widget.EditText
 import android.widget.TextView
-import androidx.annotation.*
+import androidx.annotation.DrawableRes
+import androidx.annotation.AttrRes
+import androidx.annotation.ArrayRes
+import androidx.annotation.ColorInt
+import androidx.annotation.RestrictTo
+import androidx.annotation.StringRes
+import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
+import androidx.annotation.LayoutRes
 import androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP
 import androidx.core.content.ContextCompat
 import androidx.core.text.TextUtilsCompat
 import androidx.core.view.ViewCompat
 import com.afollestad.materialdialogs.MaterialDialog
 import com.afollestad.materialdialogs.R
-import java.util.*
+import java.util.Locale
 
 @RestrictTo(LIBRARY_GROUP)
 object MDUtil {
