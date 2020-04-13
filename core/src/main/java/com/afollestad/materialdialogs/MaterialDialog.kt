@@ -26,12 +26,12 @@ import android.graphics.drawable.Drawable
 import android.util.TypedValue
 import android.util.TypedValue.COMPLEX_UNIT_DIP
 import android.view.LayoutInflater
-import androidx.annotation.Px
-import androidx.annotation.DrawableRes
-import androidx.annotation.DimenRes
-import androidx.annotation.StringRes
-import androidx.annotation.ColorRes
 import androidx.annotation.CheckResult
+import androidx.annotation.ColorRes
+import androidx.annotation.DimenRes
+import androidx.annotation.DrawableRes
+import androidx.annotation.Px
+import androidx.annotation.StringRes
 import com.afollestad.materialdialogs.WhichButton.NEGATIVE
 import com.afollestad.materialdialogs.WhichButton.NEUTRAL
 import com.afollestad.materialdialogs.WhichButton.POSITIVE

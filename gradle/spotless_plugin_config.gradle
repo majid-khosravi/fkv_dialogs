@@ -10,12 +10,13 @@ spotless {
     licenseHeaderFile rootProject.file("spotless.license.kt")		// License header file
     // Obviously, you can't specify both licenseHeader and licenseHeaderFile at the same time
 
-  //  importOrderFile 'spotless.importorder'				// An import ordering file, exported from Eclipse
+    importOrder 'java', 'javax', 'org', 'com', 'com.diffplug', ''
+//    importOrderFile 'spotless.importorder'				// An import ordering file, exported from Eclipse
     // As before, you can't specify both importOrder and importOrderFile at the same time
     // You probably want an empty string at the end - all of the imports you didn't specify
     // explicitly will go there.
 
-//    eclipse().configFile 'spotless.eclipseformat.xml'	// XML file dumped out by the Eclipse formatter
+    eclipse().configFile 'spotless.eclipseformat.xml'	// XML file dumped out by the Eclipse formatter
     // If you have Eclipse preference or property files, you can use them too.
     // eclipse('4.7.1') to specify a specific version of eclipse,
     // available versions are: https://github.com/diffplug/spotless/tree/master/lib-extra/src/main/resources/com/diffplug/spotless/extra/eclipse_jdt_formatter
