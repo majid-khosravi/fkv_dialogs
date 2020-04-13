@@ -6,45 +6,12 @@ spotless {
     removeUnusedImports()
     googleJavaFormat()
     endWithNewline()
-
-
-    licenseHeaderFile rootProject.file("spotless.license.kt")		// License header file
-    // Obviously, you can't specify both licenseHeader and licenseHeaderFile at the same time
-
-//    importOrder 'java', 'javax', 'org', 'com', 'com.diffplug', ''
-    importOrderFile 'non-existent-file'				// An import ordering file, exported from Eclipse
-    // As before, you can't specify both importOrder and importOrderFile at the same time
-    // You probably want an empty string at the end - all of the imports you didn't specify
-    // explicitly will go there.
-
-    eclipse().configFile 'non-existent-file'	// XML file dumped out by the Eclipse formatter
-    // If you have Eclipse preference or property files, you can use them too.
-    // eclipse('4.7.1') to specify a specific version of eclipse,
-    // available versions are: https://github.com/diffplug/spotless/tree/master/lib-extra/src/main/resources/com/diffplug/spotless/extra/eclipse_jdt_formatter
   }
-
-
   kotlin {
     target "**/*.kt"
     ktlint().userData(["indent_size": "2", "continuation_indent_size": "2"])
     licenseHeaderFile rootProject.file("spotless.license.kt")
     trimTrailingWhitespace()
     endWithNewline()
-
   }
-
-  kotlinGradle {
-    // same as kotlin, but for .gradle.kts files (defaults to '*.gradle.kts')
-    target '*.gradle.kts', 'additionalScripts/*.gradle.kts'
-
-    // Optional user arguments can be set as such:
-    ktlint().userData(['indent_size': '2', 'continuation_indent_size' : '2'])
-
-    // doesn't support licenseHeader, because scripts don't have a package statement
-    // to clearly mark where the license should go
-  }
-
-
-
-
 }
